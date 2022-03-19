@@ -5,10 +5,10 @@ import { withRouter } from "react-router-dom";
 import CartItem from "../cart-item/cart-item.component";
 
 const CartDropdown = ({history,setHidden}) =>{
-    const cart = useSelector(state=>state.cart)
+    const cart = useSelector(state=>state.cart);
     return (<div className="cart-dropdown">
         <div className="cart-items">{
-          cart.cartItems.length?cart.cartItems.map((cartItem,idx)=><CartItem key={idx} item={cartItem}/>)
+          cart.cartItems.length ? cart.cartItems.map((cartItem,idx)=><CartItem key={idx} item={cartItem}/>)
           :
           <span className="empty-message">No items in cart</span>
         }</div>
