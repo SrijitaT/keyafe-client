@@ -4,6 +4,7 @@ import ShopPage from "./pages/shop/shop.component";
 import Header from './components/header/header.component';
 
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+import ProductDetails from './pages/productDetails/productDetails.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import Dashboard from './pages/dashboard/dashboard.component';
 import { Switch,Route,BrowserRouter,Redirect } from "react-router-dom";
@@ -27,7 +28,8 @@ function App() {
       <Route path="/shop/:id" component={ShopPage} />
       <Route exact path="/signin" render={()=> currentUser ? <Redirect to="/"/> : <SignInAndSignUpPage/>}/>
       <Route exact path="/checkout" component={CheckoutPage}/>
-      <Route exact path="/profile/dashboard" component={Dashboard}></Route>
+      {/*<Route exact path="/profile/dashboard" component={Dashboard}></Route>*/}
+      <Route path="/description" component={ProductDetails}></Route>
     </Switch>
     </BrowserRouter>
     </Container>
