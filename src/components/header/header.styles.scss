@@ -1,18 +1,36 @@
 .header {
-  height: 70px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 35px;
+  // height: 100px;
+  // width: 100%;
+  // display: flex;
+  // justify-content: space-between;
+  // margin-bottom: 35px;
+
+.nav-menu{
+  justify-content: center;
+  align-items: center;
+}
 
   .logo-container {
     height: 100%;
     width: 100px;
     //padding: 25px;
   }
-.logo{
-  border-radius: 25%;
-}
+  .logo {
+    border-radius: 25%;
+    width: 100px;
+    height: 100px;
+  }
+
+  @media (max-width: 768px) {
+    .logo-container {
+      width: 50px;
+
+      .logo {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
   .options {
     width: 50%;
     height: 100%;
