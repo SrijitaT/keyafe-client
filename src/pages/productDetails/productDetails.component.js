@@ -85,9 +85,7 @@ const ProductDetails = () => {
     //             </Grid>
     //     </Grid>
     // </Grid>
-
-    <div>
-      <Container fluid>
+      
         <Row>
           <Col className="leftSide" lg={6}>
             <div className="imgdiv">
@@ -198,8 +196,8 @@ const ProductDetails = () => {
             </Container>
           </Col>
         </Row>
-      </Container>
-    </div>
+      
+
   );
 };
 

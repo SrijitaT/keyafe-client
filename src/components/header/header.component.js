@@ -22,9 +22,7 @@ export default function Header() {
         console.log(scrolled);
           setScrollState("header active")
       } else {
-       
           setScrollState("header")
-        
       }
     })
     return () => {
