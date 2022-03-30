@@ -1,6 +1,6 @@
 .cart-dropdown {
     position: absolute;
-    width: 240px;
+    width: 300px;
     height: 340px;
     display: flex;
     flex-direction: column;
@@ -10,6 +10,12 @@
     top: 90px;
     right: 40px;
     z-index: 5;
+
+
+   @media (max-width: 768px) {
+       right: 20px;
+   }
+
   
     .cart-items {
       height: 240px;

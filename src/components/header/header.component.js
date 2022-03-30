@@ -19,7 +19,7 @@ export default function Header() {
     listener = document.addEventListener("scroll", e => {
       var scrolled = document.scrollingElement.scrollTop
       if (scrolled >= 60) {
-        console.log(scrolled);
+    
           setScrollState("header active")
       } else {
           setScrollState("header")

@@ -1,0 +1,45 @@
+.date-module{
+    display: flex;
+    box-sizing: border-box;
+    margin: 5px 5px;
+    justify-content: space-between;
+    width: 400px;
+
+   
+
+    @media (max-width: 768px){
+        width: 280px;
+        flex-direction: column;
+    }
+   
+    .timeslot-button{
+        border: 1px solid #000;
+        border-radius: 4px !important;
+
+        @media (max-width:768px){
+            margin: 8px 0;
+        }
+    }
+}
+
+.date-heading{
+    margin: 15px 2px;
+}
+
+.delivery-time-module{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    @media (max-width:768px){
+        flex-direction: column;
+    }
+
+    .delivery-slot-button{
+        border: 1px solid #000;
+        width: 150px;
+
+    
+    }
+}
+
