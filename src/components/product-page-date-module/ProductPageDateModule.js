@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import DatePicker from "react-date-picker";
 import "react-date-picker/dist/DatePicker.css";
 import "./productpagedatemodule.scss";
+import TimeSlot from "./timeslot/TimeSlot";
+
 
 const ProductPageDateModule = () => {
+  const [ timeslot, setTimeSlot] = useState(false);
   const [date, setDate] = useState(new Date());
   const [deliverystatus, setDeliverystatus] = useState(false);
   const todayMonth = new Date().toLocaleString('default', { month: 'short' });
@@ -24,27 +27,28 @@ const ProductPageDateModule = () => {
         <h2 className="delivery-heading">SELECT DELIVERY TIME</h2>
         <div className="delivery-time-module">
           <div>
-            <button className="btn delivery-slot-button">
+            <button className="btn delivery-slot-button" onClick={() =>setTimeSlot(true)}>
               Standard
               <p>Free</p>
             </button>
             <p>Delivery during selected slot</p>
           </div>
           <div>
-            <button className="btn delivery-slot-button">
+            <button className="btn delivery-slot-button" onClick={() =>setTimeSlot(true)}>
               Fixed Time
               <p>Rs 100</p>
             </button>
             <p>Delivery during selected 2 hour slot</p>
           </div>
           <div>
-            <button className="btn delivery-slot-button">
+            <button className="btn delivery-slot-button" onClick={() =>setTimeSlot(true)}>
               Midnight
               <p>Rs 200</p>
             </button>
             <p>Delivery between 11:00PM & 11:59PM</p>
           </div>
         </div>
+        {timeslot? <TimeSlot /> : null}
       </div>
     </>
   );

@@ -15,7 +15,6 @@ const ProductDetails = () => {
   };
 
 
-
   const display = () => {
     if (pin === null || pin === '') {
       setShake(true);
@@ -115,13 +114,11 @@ const ProductDetails = () => {
                       ? "btn pincode-button animate__animated "
                       : "btn pincode-button animate__animated d-none"
                   }
-                  // id="pincode-button"
                   variant="outlined">
                   Check
                 </Button>
 
                 <p
-                  // id="pincode-text"
                   className={
                     pin
                       ? "btn pincode-text animate__animated d-block"
@@ -130,11 +127,7 @@ const ProductDetails = () => {
                   Available
                 </p>
               </div>
-
-              {/* <DatePicker value={date} onChange={setDate} /> */}
               {!pin? null: <ProductPageDateModule /> }
-             
-
               <div className="description-title">
                 <h3>Description</h3>
               </div>

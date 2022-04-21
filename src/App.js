@@ -7,6 +7,7 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import ProductDetails from './pages/productDetails/productDetails.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import Dashboard from './pages/dashboard/dashboard.component';
+import Profile from './pages/profile/Profile';
 import { Switch,Route,BrowserRouter,Redirect } from "react-router-dom";
 import { useSelector,useDispatch } from 'react-redux';
 import {setCurrentUser} from './redux/user/user.actions.js';
@@ -29,6 +30,7 @@ function App() {
       <Route exact path="/checkout" component={CheckoutPage}/>
       {/*<Route exact path="/profile/dashboard" component={Dashboard}></Route>*/}
       <Route path="/description" component={ProductDetails}></Route>
+      <Route path="/profile" component={Profile}></Route>
     </Switch>
     </BrowserRouter>
     </Container>
