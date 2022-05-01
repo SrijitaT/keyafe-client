@@ -25,7 +25,7 @@ export default function SignInPage() {
         <div className="buttons">
           <CustomButton type="submit">Sign In</CustomButton>
           <CustomButton isGoogleSignIn>
-            Sign In with Google
+            Sign In with Google 
           </CustomButton>
         </div>
       </form>

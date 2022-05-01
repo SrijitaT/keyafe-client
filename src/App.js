@@ -12,6 +12,9 @@ import { Switch,Route,BrowserRouter,Redirect } from "react-router-dom";
 import { useSelector,useDispatch } from 'react-redux';
 import {setCurrentUser} from './redux/user/user.actions.js';
 import "./App.css";
+import MyProfile from './pages/profile/profileView/MyProfile';
+import TrackOrder from './pages/profile/profileView/TrackOrder';
+import OrderHistory from './pages/profile/profileView/OrderHistory';
 
 
 function App() {
@@ -31,6 +34,9 @@ function App() {
       {/*<Route exact path="/profile/dashboard" component={Dashboard}></Route>*/}
       <Route path="/description" component={ProductDetails}></Route>
       <Route path="/profile" component={Profile}></Route>
+      <Route path="/Profile-page" component={MyProfile}></Route>
+      <Route path="/Track-Orders" component={TrackOrder}></Route>
+      <Route path="/Orders" component={OrderHistory}></Route>
     </Switch>
     </BrowserRouter>
     </Container>

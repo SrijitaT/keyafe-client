@@ -1,11 +1,12 @@
 import React from 'react'
 import ProfileMenu from './ProfileMenu'
+import ProfileMain from './ProfileMain'
 
 const Profile = () => {
   return (
-    <>
-    <ProfileMenu />
-    </>
+    <div className='profile-container'>
+    <ProfileMain />
+    </div>
   )
 }
 

@@ -8,13 +8,13 @@ const ProfileMenu = () => {
     <div className="profile-menu">
       <ul className="profile-menu-item">
         <li>
-        <Link to="/Profile" className="profile-menu-item-list">
+        <Link to="/Profile-page" className="profile-menu-item-list">
                <FaUserAlt className="profile-icons" /> <p className="menu-list">My Profile</p>
               </Link>
         </li>
         <li >
-            <Link to="/Wallet" className="profile-menu-item-list">
-          <FaWallet className="profile-icons" /> <p className="menu-list">My Wallet</p>
+            <Link to="/Track-Orders" className="profile-menu-item-list">
+          <FaWallet className="profile-icons" /> <p className="menu-list">Track Orders</p>
           </Link>
         </li>
         <li >
