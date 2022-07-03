@@ -8,7 +8,7 @@ const ProfileMenu = () => {
     <div className="profile-menu">
       <ul className="profile-menu-item">
         <li>
-        <Link to="/Profile-page" className="profile-menu-item-list">
+        <Link to="/profile" className="profile-menu-item-list">
                <FaUserAlt className="profile-icons" /> <p className="menu-list">My Profile</p>
               </Link>
         </li>
@@ -23,7 +23,7 @@ const ProfileMenu = () => {
           </Link>
         </li>
         <li >
-            <Link to="/Address" className="profile-menu-item-list">
+            <Link to="/address" className="profile-menu-item-list">
           <FaAddressBook className="profile-icons" /> <p className="menu-list">My Address</p>
           </Link>
         </li>

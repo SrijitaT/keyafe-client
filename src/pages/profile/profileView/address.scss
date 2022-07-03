@@ -1,0 +1,55 @@
+.main-address-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px
+    ;
+   
+
+    .right-address-section{
+        h6{
+            margin: 5px 8px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        height: 220px;
+        position: relative;
+
+        .add-address{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            background-color: rgb(44, 101, 146);
+            border-radius: 5px;
+        }
+
+        .address-history{
+            display: flex;
+            flex-direction: row;
+            margin: 15px 15px;
+            gap: 20px;
+            .checkbox-round {
+                width: 1.3em;
+                height: 1.3em;
+                background-color: white;
+                border-radius: 50%;
+                vertical-align: middle;
+                border: 1px solid #ddd;
+                appearance: none;
+                -webkit-appearance: none;
+                outline: none;
+                cursor: pointer;
+            }
+            
+            .checkbox-round:checked {
+                background-color: rgb(22, 97, 1);
+            }
+
+            .saved-address{
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+}

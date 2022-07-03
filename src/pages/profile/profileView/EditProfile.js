@@ -1,32 +1,24 @@
 import { useState } from "react";
 
-export default function UserForm({addContact}) {
+export default function UserForm({formData, setFormData, setToggelform}) {
 
-  const [contactInfo, setContactInfo] = useState({
-    username: "",
-    email: "",
-    contact: "",
-    title: "",
-    country: "",
-    dob: "",
-  });
+  const [contactInfo, setContactInfo] = useState(formData);
 
   const handleChange = (event) => {
     setContactInfo({ ...contactInfo, [event.target.name]: event.target.value });
+    console.log(contactInfo);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(contactInfo);
-    addContact(contactInfo);
-    setContactInfo({ 
-        username: "",
+    setFormData(contactInfo);
+    setContactInfo({  
         email: "",
         contact: "",
-        title: "",
         country: "",
         dob: "",
     });
+    setToggelform(true);
   };
 
   return (
@@ -38,17 +30,19 @@ export default function UserForm({addContact}) {
         <div>
           <input
             type="text"
-            name="name"
+            name="title"
             placeholder="Title"
             value={contactInfo.title}
+            onChange={handleChange}
           />
         </div>
         <div>
           <input
             type="text"
-            name="name"
+            name="username"
             placeholder="Name"
             value={contactInfo.username}
+            onChange={handleChange}
           />
         </div>
         <div>
@@ -57,26 +51,29 @@ export default function UserForm({addContact}) {
             name="email"
             placeholder="Email"
             value={contactInfo.email}
+            onChange={handleChange}
           />
         </div>
         <div>
           <input
             type="text"
-            name="countryName"
+            name="country"
             placeholder="Country"
             value={contactInfo.country}
+            onChange={handleChange}
           />
         </div>
         <div>
           <input
-            type="number"
-            name="phonenumber"
+            type="tel"
+            name="contact"
             placeholder="Phone Number"
-            value={contactInfo.phonenumber}
+            value={contactInfo.contact}
+            onChange={handleChange}
           />
         </div>
         <div>
-          <button onClick={handleChange}>Submit Contact</button>
+          <button type="submit">Save Changes</button>
         </div>
       </form>
     </div>
